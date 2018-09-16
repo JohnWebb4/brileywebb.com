@@ -1,3 +1,4 @@
+import "semantic-ui-less/semantic.less";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
