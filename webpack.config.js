@@ -69,6 +69,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      vue$: 'vue/dist/vue.js',
       '../../theme.config$': path.join(__dirname, 'theme/theme.config'),
     },
     extensions: ['.js', '.ts', '.vue'],
