@@ -39,29 +39,28 @@
   import VueRouter from 'vue-router';
   Vue.use(VueRouter);
 
-  import Books from "./components/Books.vue";
-  import Contact from "./components/Contact.vue";
-  import Home from "./components/Home.vue";
-  import Photographs from "./components/Photographs.vue";
-  import Screenplay1 from "./components/Screenplay1.vue";
-  import Screenplay2 from "./components/Screenplay2.vue";
-  import Screenplay3 from "./components/Screenplay3.vue";
+  import Books from "./screens/Books.vue";
+  import Contact from "./screens/Contact.vue";
+  import Home from "./screens/Home.vue";
+  import Photographs from "./screens/Photographs.vue";
+  import Screenplay1 from "./screens/Screenplay1.vue";
+  import Screenplay2 from "./screens/Screenplay2.vue";
+  import Screenplay3 from "./screens/Screenplay3.vue";
 
 
   const routes = [
+    { path: "/", component: Home, icon: "home", text: "Go Home" },
     { path: "/books", component: Books, icon: "book", text: "Go to Books"},
-    { path: "/contact", component: Contact, icon: "envelope", text: "Contact Me" },
-    { path: "/home", component: Home, icon: "home", text: "Go Home" },
-    { path: "/photographs", component: Photographs, icon: "camera", text: "Photographs" },
     { path: "/screenplay1", component: Screenplay1, icon: "film", text: "ScreenPlays 1" },
     { path: "/screenplay2", component: Screenplay2, icon: "film", text: "ScreenPlays 2" },
     { path: "/screenplay3", component: Screenplay3, icon: "film", text: "ScreenPlays 3" },
+    { path: "/photographs", component: Photographs, icon: "camera", text: "Photographs" },
+    { path: "/contact", component: Contact, icon: "envelope", text: "Contact Me" },
   ];
 
 const router = new VueRouter({
   routes,
 });
-
 
 export default {
   data: () => ({ 
