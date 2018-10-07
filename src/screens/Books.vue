@@ -1,8 +1,7 @@
 <template>
   <div>
     <header>
-      <h2>Books</h2>
-      <card />
+      <card content="hello" title="A title" image="/images/desert.jpg"/>
     </header>
     <section>
     </section>
@@ -11,6 +10,7 @@
 
 <script>
   import Card from '../components/Card.vue'
+
   export default {
     components: {
       Card,

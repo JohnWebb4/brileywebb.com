@@ -1,61 +1,64 @@
 <template>
   <div>
-      <aside
-        class="ui sidebar inverted vertical menu left"
-        v-bind:class="{ visible: showMenu }"
-      >
-        <router-link v-text="route.text" class="item" v-bind:to="route.path" v-bind:key="route.path" v-for="route in routes">
-          <i class="icon" v-bind:class="route.icon"></i>
-        </router-link>
-      </aside>
-      <section class="pusher">
-        <header class="ui inverted vertical masthead center aligned segment">
-          <div class="ui text container">
-            <h1 class="ui huge inverted header">
-              BrileyWebb.com
-            </h1>
-            <h3>
-              Books, Screenplays, and Photographs
-            </h3>
-          </div>
-          <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-              <div class="item" v-on:click="showMenu = !showMenu">
-                <i class="icon align justify"></i>
-              </div>
-              <router-link v-text="route.text" class="item" v-bind:to="route.path" v-bind:key="route.path" v-for="route in routes">
-                <i class="icon" v-bind:class="route.icon"></i>
-              </router-link>
-            </div>
-          </div>
-        </header>
-        <router-view class="ui vertical stripe segment"></router-view>
-      </section>
+    <header class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title" v-text="headerTitle"></h1>
+          <h2 class="subtitle" v-text="headerText"></h2>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar stick-top is-link" role="navigation" aria-label="main navigation">
+      <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" v-on:click="mobileShowMenu = !mobileShowMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="navMenu" class="navbar-menu" v-bind:class="{ 'is-active': mobileShowMenu }">
+        <div class="navbar-start">
+          <router-link class="navbar-item" v-bind:to="route.path" v-bind:key="route.path" v-for="route in routes">
+            <span class="icon is-medium">
+              <i class="fas fa-lg" v-bind:class="route.icon"></i>
+            </span>
+            <span>
+              {{ route.text }}
+            </span>
+          </router-link>
+        </div>
+      </div>
+    </nav>
+    <div class="section">
+      <router-view class="ui vertical segment"></router-view>
+    </div>
   </div>
 </template>
+
+<style scoped>
+  .stick-top {
+    position: sticky;
+    top: 0;
+  }
+</style>
 
 <script>
   import Vue from 'vue';
   import VueRouter from 'vue-router';
+
   Vue.use(VueRouter);
 
   import Books from "./screens/Books.vue";
   import Contact from "./screens/Contact.vue";
   import Home from "./screens/Home.vue";
   import Photographs from "./screens/Photographs.vue";
-  import Screenplay1 from "./screens/Screenplay1.vue";
-  import Screenplay2 from "./screens/Screenplay2.vue";
-  import Screenplay3 from "./screens/Screenplay3.vue";
+  import Screenplays from "./screens/Screenplays.vue";
 
-
+  // Route order is order appears on screen
   const routes = [
-    { path: "/", component: Home, icon: "home", text: "Go Home" },
-    { path: "/books", component: Books, icon: "book", text: "Go to Books"},
-    { path: "/screenplay1", component: Screenplay1, icon: "film", text: "ScreenPlays 1" },
-    { path: "/screenplay2", component: Screenplay2, icon: "film", text: "ScreenPlays 2" },
-    { path: "/screenplay3", component: Screenplay3, icon: "film", text: "ScreenPlays 3" },
-    { path: "/photographs", component: Photographs, icon: "camera", text: "Photographs" },
-    { path: "/contact", component: Contact, icon: "envelope", text: "Contact Me" },
+    { path: "/", component: Home, icon: "fa-home", text: __('menu.home') },
+    { path: "/books", component: Books, icon: "fa-book", text: __('menu.books')},
+    { path: "/screenplays", component: Screenplays, icon: "fa-film", text: __('menu.screenplays') },
+    { path: "/photographs", component: Photographs, icon: "fa-camera", text: __('menu.photographs') },
+    { path: "/contact", component: Contact, icon: "fa-envelope", text: __('menu.contact') },
   ];
 
 const router = new VueRouter({
@@ -64,7 +67,9 @@ const router = new VueRouter({
 
 export default {
   data: () => ({ 
-    showMenu: false,
+    headerTitle: __('header.title'),
+    headerText: __('header.text'),
+    mobileShowMenu: false,
     routes,
   }),
   router,

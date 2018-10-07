@@ -1,9 +1,10 @@
-import "semantic-ui-less/semantic.less";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "bulma/css/bulma.css";
 import Vue from "vue";
 import App from "./App.vue";
 
 const vueApp  = new Vue({
   components: { App },
   el: "#app",
-  template: "<App />",
+  render: (h) => h(App),
 });

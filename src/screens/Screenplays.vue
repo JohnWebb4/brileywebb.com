@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h2>Screenplay 1</h2>
+    <h2>Screenplays</h2>
   </div>
 </template>
