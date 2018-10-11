@@ -1,11 +1,19 @@
 <template>
-  <article class="tile">
-    <p class="content">{{content}}</P>
-    <p v-if="title" class="title">{{title}}</p>
-    <figure class="image is-4by3">
-      <img v-if="image" v-bind:src="image">
-    </figure>
-  </article>
+  <div class="tile is-child is-light notification">
+    <div class="columns">
+      <div class="column is-four-fifths">
+        <p v-if="title" class="title">{{title}}</p>
+        <p v-if="subtitle" class="subtitle">{{subtitle}}</p>
+        <p class="content">{{content}}</P>
+        <slot></slot>
+      </div>
+      <div class="column is-one-fifth">
+        <figure class="image is-128x128">
+          <img v-if="image" v-bind:src="image">
+        </figure>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,10 +24,14 @@
         type: String,
         default: '',
       },
+      subtitle: {
+        type: String,
+        default: '',
+      },
       title: {
         type: String,
         default: '',
       },
-  }
     },
+  };
 </script>
