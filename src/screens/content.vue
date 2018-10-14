@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Books</h1>
-    <div class="tile is-ancestor">
+    <div class="tile is-vertical is-ancestor">
       <card
         v-bind:title="content.title"
         v-bind:subtitle="content.subtitle"

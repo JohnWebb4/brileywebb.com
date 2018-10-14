@@ -1,7 +1,7 @@
 import { ContentTypes } from "./contenttypes";
 
 interface IContent {
-  content?: string;
+  content?: string[];
   image?: string;
   subtitle?: string;
   title?: string;

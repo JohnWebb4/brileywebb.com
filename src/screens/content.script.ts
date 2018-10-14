@@ -1,4 +1,3 @@
-/** tsling */
 import { ContentTypes } from "../../typings/contenttypes";
 import { IContent } from "../../typings/icontent";
 import Card from "../components/card.vue";
@@ -9,7 +8,7 @@ export default {
   },
   computed: {
     filteredContents(): IContent[] {
-      return this.contents.filter((book: IContent) => book.type === this.type);
+      return (this as any).contents.filter((book: IContent) => book.type === (this as any).type);
     },
   },
   props: {

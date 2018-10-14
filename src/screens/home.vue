@@ -6,9 +6,9 @@
     <img src="images/tess2_0.jpg" />
     <h3>ScreenPlays</h3>
     <h4>
-      <pre>Features
-and
-Short</pre>
+      <p>Features</p>
+      <p>and</p>
+      <p>Short</p>
     </h4>
   </div>
 </template>

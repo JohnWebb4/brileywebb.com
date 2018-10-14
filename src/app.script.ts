@@ -11,17 +11,35 @@ Vue.use(VueRouter);
 
 const contents: IContent[] = [
   {
-    content: "hi",
-    image: "images/bird.jpg",
+    content: __("content.tess_2_0.content").split("\n"),
+    image: "images/tess2_0.jpg",
     subtitle: "Sub",
-    title: "title",
+    title: __("content.tess_2_0.title"),
     type: ContentTypes.Book,
   },
   {
-    content: "yes",
-    image: "images/desert.jpg",
-    subtitle: "any",
-    title: "something",
+    content: __("content.truer_detective.content").split("\n"),
+    image: "images/truer_detective_1.jpg",
+    subtitle: __("content.truer_detective.subtitle"),
+    title: __("content.truer_detective.title"),
+    type: ContentTypes.Screenplay,
+  },
+  {
+    content: __("content.lone_wolf_carnival.content").split("\n"),
+    image: "images/lone_wolf_carnival.jpg",
+    title: __("content.lone_wolf_carnival.title"),
+    type: ContentTypes.Screenplay,
+  },
+  {
+    content: __("content.gun_club_rules.content").split("\n"),
+    title: __("content.gun_club_rules.title"),
+    type: ContentTypes.Screenplay,
+  },
+  {
+    content: __("content.tess_2_0_stage.content").split("\n"),
+    image: "images/tess2_0.jpg",
+    subtitle: "Sub",
+    title: __("content.tess_2_0.title"),
     type: ContentTypes.Screenplay,
   },
 ];
