@@ -17,21 +17,24 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      content: String,
-      image: {
-        type: String,
-        default: '',
-      },
-      subtitle: {
-        type: String,
-        default: '',
-      },
-      title: {
-        type: String,
-        default: '',
-      },
+export default {
+  props: {
+    content: {
+      type: String,
+      default: '',
     },
-  };
+    image: {
+      type: String,
+      default: '',
+    },
+    subtitle: {
+      type: String,
+      default: '',
+    },
+    title: {
+      type: String,
+      default: '',
+    },
+  },
+};
 </script>

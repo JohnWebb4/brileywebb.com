@@ -1,3 +1,12 @@
 {
-    "extends": "airbnb-base"
+    "extends": [
+        "airbnb-base",
+        "plugin:vue/essential"
+    ],
+    "rules": {
+        "import/no-unresolved": 0
+    },
+    "globals": {
+        "__": true
+    }
 }

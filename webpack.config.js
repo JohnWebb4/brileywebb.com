@@ -22,7 +22,20 @@ module.exports = Object.keys(languages).map(language => ({
       },
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              compact: true,
+            },
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              appendTsSuffixTo: [/\.vue$/],
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
       {
@@ -54,6 +67,12 @@ module.exports = Object.keys(languages).map(language => ({
     new VueLoaderPlugin(),
   ],
   resolve: {
+    alias: {
+      // '@components': path.resolve(__dirname, 'src/components/'),
+      // '@screens': path.resolve(__dirname, 'src/screens/'),
+      '@src': path.resolve(__dirname, 'src/'),
+      // '@typings': path.resolve(__dirname, 'typings/'),
+    },
     extensions: ['.js', '.ts', '.vue'],
   },
 }));
