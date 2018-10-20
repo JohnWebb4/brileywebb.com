@@ -110,7 +110,6 @@ const routes = [
     path: "/photographs",
     props: {
       contents,
-      perLine: 3,
       type: ContentTypes.Photograph,
     },
     text: __("menu.photographs"),

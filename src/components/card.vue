@@ -1,5 +1,5 @@
 <template>
-  <div class="tile is-parent">
+  <div class="tile is-parent is-wrap">
     <div class="tile is-child is-light" v-bind:class="{notification: !isJustImage}">
       <div class="columns is-desktop">
         <div
