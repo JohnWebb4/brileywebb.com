@@ -42,9 +42,41 @@ const contents: IContent[] = [
     title: __("content.tess_2_0.title"),
     type: ContentTypes.Screenplay,
   },
+  {
+    image: "images/bird_2.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/hummingbird.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/cactus.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/sunset.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/bluebird.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/roadrunner.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/cactus.jpg",
+    type: ContentTypes.Photograph,
+  },
+  {
+    image: "images/flower.jpg",
+    type: ContentTypes.Photograph,
+  },
 ];
 
-// Route order is order appears on screen
+// Route order as in menu
 const routes = [
   {
     component: Home,
@@ -78,6 +110,7 @@ const routes = [
     path: "/photographs",
     props: {
       contents,
+      perLine: 3,
       type: ContentTypes.Photograph,
     },
     text: __("menu.photographs"),

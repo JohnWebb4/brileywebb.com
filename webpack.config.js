@@ -21,6 +21,14 @@ module.exports = Object.keys(languages).map(language => ({
         use: 'babel-loader',
       },
       {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
         test: /\.ts$/,
         use: [
           {
