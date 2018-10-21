@@ -13,7 +13,6 @@ const contents: IContent[] = [
   {
     content: __("content.tess_2_0.content").split("\n"),
     image: "images/tess2_0.jpg",
-    subtitle: "Sub",
     title: __("content.tess_2_0.title"),
     type: ContentTypes.Book,
   },
@@ -36,9 +35,13 @@ const contents: IContent[] = [
     type: ContentTypes.Screenplay,
   },
   {
+    content: __("content.russian_snowflake.content").split("\n"),
+    title: __("content.russian_snowflake.title"),
+    type: ContentTypes.Screenplay,
+  },
+  {
     content: __("content.tess_2_0_stage.content").split("\n"),
     image: "images/tess2_0.jpg",
-    subtitle: "Sub",
     title: __("content.tess_2_0.title"),
     type: ContentTypes.Screenplay,
   },
@@ -67,7 +70,7 @@ const contents: IContent[] = [
     type: ContentTypes.Photograph,
   },
   {
-    image: "images/cactus.jpg",
+    image: "images/cactus_2.jpg",
     type: ContentTypes.Photograph,
   },
   {
