@@ -8,6 +8,10 @@
         v-bind:key="content.title"
         v-bind:content="content.content"
         v-bind:image="content.image"
+        v-bind:extraLeftTitle="content.extraLeftTitle"
+        v-bind:extraLeft="content.extraLeft"
+        v-bind:extraRightTitle="content.extraRightTitle"
+        v-bind:extraRight="content.extraRight"
         v-for="content in filteredContents"
       />
       </div>

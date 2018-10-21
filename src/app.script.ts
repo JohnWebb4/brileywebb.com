@@ -12,6 +12,9 @@ Vue.use(VueRouter);
 const contents: IContent[] = [
   {
     content: __("content.tess_2_0.content").split("\n"),
+    extraLeft: __("content.tess_2_0.chapters").split("\n"),
+    extraLeftTitle: __("chapterTitles"),
+    extraRight: __("content.tess_2_0.links").split("\n"),
     image: "images/tess2_0.jpg",
     title: __("content.tess_2_0.title"),
     type: ContentTypes.Book,

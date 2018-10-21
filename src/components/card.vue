@@ -11,7 +11,7 @@
           </figure>
         </div>
         <div v-if="!isJustImage" class="column is-four-fifths">
-          <p v-if="title" class="title">{{title}}</p>
+          <h2 v-if="title" class="title">{{title}}</h2>
           <p v-if="subtitle" class="subtitle">{{subtitle}}</p>
           <p
             class="content"
@@ -23,11 +23,29 @@
           <slot></slot>
           <div class="columns is-desktop">
             <div class="column">
-              Hello
+              <h4 class="title is-4">{{extraLeftTitle}}</h4>
+              <p
+                class="content"
+                v-bind:key="extraLeftText"
+                v-for="extraLeftText in extraLeft"
+              >
+                {{extraLeftText}}
+              </p>
             </div>
             <div class="column">
-              Hi
+              <h4 class="title is-4">{{extraRightTitle}}</h4>
+              <p
+                class="content"
+                v-bind:key="extraRightText"
+                v-for="extraRightText in extraRight"
+              >
+                {{extraRightText}}
+              </p>
             </div>
+          </div>
+          <div class="container">
+          </div>
+          <div class="links">
           </div>
         </div>
       </div>

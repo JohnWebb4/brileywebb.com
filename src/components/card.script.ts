@@ -10,6 +10,22 @@ export default {
       default: () => [],
       type: Array,
     },
+    extraLeft: {
+      default: () => [],
+      type: Array,
+    },
+    extraLeftTitle: {
+      default: "",
+      type: String,
+    },
+    extraRight: {
+      default: () => [],
+      type: Array,
+    },
+    extraRightTitle: {
+      default: "",
+      type: String,
+    },
     image: {
       default: "",
       type: String,
