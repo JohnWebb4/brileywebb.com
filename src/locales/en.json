@@ -1,6 +1,14 @@
 {
+  "availableAmazon": "Available on Amazon",
+  "characters": "Characters",
   "chapterTitles": "Chapter Titles",
   "content": {
+    "casa_desert": {
+      "title": "Casa in the Desert",
+      "content": "Rod Serling and Death walk into a bar...\nRose wants a weekend getaway with four friends, not to be the punch line to a cosmic joke. She's not going to get what she wants.\nHill City is a ghost town that is anything, but deserted. Coyotes are plentiful and water is scarce.\nA long drive from Phoenix proves to be a longer trip home; if they get home.",
+      "sections": "ROSE is intelligent, quiet and pretty in a 'most guys don't like me because I'm smarter than they are' kind of way.\nLINDSAY sees the positive side to any situation. Yes, it's as annoying as it sounds.\nRYAN will sleep with any girl, anywhere, anytime.\nJESSIE is Ryan's current any. She sees the angry side to any situation.\nKEVIN is along for the ride and the company, especially Lindsay.",
+      "extras": "DEATH, \"Since graduation five high school friends have gone their separate ways, but kept in touch. Twice a year they get together for a weekend of fun and frivolity. No, that can't be right. They take a weekend road trip together. It's Lindsay's turn to pick their destination. Lindsay doesn't realize she got a MapQuest to horror. She has GPS coordinates for fear. Let's just say, Lindsay makes a really bad choice.\""
+    },
     "lone_wolf_carnival": {
       "title": "Lone Wolf Carnival",
       "content": "Lone Wolf Carnival is a small, retro if it were cool, but really just old carnival that travels the rural south. Most of the workers are guilty of something, but nothing as serious as murder. Lucky, this isn't a serious story. The carnival blows into town followed by a cloud of pot smoke that invites all to come and have a high time, one way or another. The carnival's owner, Clive/Ronald is trying to attract lots of customers to make lots of money. Unfortunately for him, the carnival attracts the police when a local blogger makes it to the carnival's opening night concert, but doesn't make it home.\nWhile local law enforcement searches for the missing woman they discover two carnival employees haven't been seen since the carnival got to town. Their missing persons list now includes a magician who learned his craft after his father disappeared with the preacher's wife and a preschool motivational speaker whose favorite topic is: \"Waldo - Does He Really Want to be Found?\"\nThe two officers in charge have their own problems to solve. One is more interested in the pretty new medical examiner than searching for clues; while the other searches for meaning to life since his divorce. Seeing his ex in a Ta-Tas parade down Main Street does nothing to reconcile the couple or improve his mood.\nThe junior detective does all the work from placing large remains in a body bag that is too small to collecting evidence from a dumpster. He better wear gloves.\nThe new police captain is rethinking her job choice.\nSuspects are interviewed. Clues are assembled. Relationships started and ended. Not just another buddy cop movie when three buddies and an armadillo are part of the cast."
@@ -11,7 +19,8 @@
     },
     "russian_snowflake": {
       "title": "Russian Snowflake",
-      "content": "When a journalist, an anarchist and Kiev Gun Broker walk into a bar confusion happens. Protests pop up, elderly protestors fall down, young protestors find a place to vent their frustration at being ...young? Tour the town from the city hall run by a biker gang to a gun club like none other. Free coffee for everyone. Snowflakes of the world unite!"
+      "content": "When a journalist, an anarchist and Kiev Gun Broker walk into a bar confusion happens. Protests pop up, elderly protestors fall down, young protestors find a place to vent their frustration at being ...young? Tour the town from the city hall run by a biker gang to a gun club like none other. Free coffee for everyone. Snowflakes of the world unite!",
+      "extras": "2018 Scriptapalooza Screenplay Contest\nQuarterfinalist Comedy"
     },
     "tess_2_0": {
       "title": "Tess 2.0",
@@ -26,18 +35,29 @@
       "title": "True Detective",
       "subtitle": "SPOILER ALERT ... The killer did it.",
       "content": "Small town police officers ticket drivers who speed, pick-up shoplifters at the dollar store and track down truant high school students. Small town life is slow and not very exciting or dangerous. One murder would be unusual and several murders would be very different.\nLuckily, the two detectives assigned to solve these crimes are very different.\nWoodrow and Joshua may be partners, but they are opposites. Woodrow is married. Joshua is single. Woodrow doesn't know the meaning of fidelity and Joshua doesn't know the meaning of reality. Woodrow comes from a family tradition of police officers. Some suspended. Some just never caught. Joshua was raised by wolves.\nOpposites or not, they have to work together to stop this backwoods' crime spree with antlers and t-shirts the only clues for a couple of clueless detectives."
+    },
+    "women_history": {
+      "title": "Women in American History A Social, Political, and Cultural Encyclopedia and Document Collection in Four Volumes",
+      "extras": "Peg A. Lamphier and Rosanne Welch, Editors\nLinda Briley-Webb, Contributing writer",
+      "sections": "Pre-Colonial North America to the Early Republic\nAntebellum America through the Gilded Age\nProgressive Era through World War II\nCold War America to Today"
     }
   },
+  "email": "E-mail",
+  "featuresAndShort": "Features\nand\nShort",
   "header": {
     "text": "Books, Screenplays, and Photographs",
     "title": "BrileyWebb.com"
   },
+  "links": "Links",
   "menu": {
     "books": "Go to Books",
     "contact": "Contact Me",
     "home": "Go Home",
     "photographs": "Photographs",
-    "screenplays": "ScreenPlays"
+    "screenplays": "Screenplays"
   },
-  "talkAt": "Always happy to talk at: "
+  "rusaWinner": "RUSA Winner American Library Association",
+  "screenplays": "Screenplays",
+  "talkAt": "Always happy to talk at: ",
+  "volumes": "Volumes"
 }

@@ -9,10 +9,10 @@
         <img src="images/bird.jpg" />
       </div>
       <div class="column is-centered">
-        <h3>ScreenPlays</h3>
-        <h4>Features</h4>
-        <h4>and</h4>
-        <h4>Short</h4>
+        <h3>{{screenplays}}</h3>
+        <h4 v-bind:key="text" v-for="text in featuresAndShort">
+          {{text}}
+        </h4>
       </div>
       <div class="column is-flex is-centered">
         <img src="images/tess2_0.jpg" />
@@ -20,3 +20,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    screenplays: __('screenplays'),
+    featuresAndShort: __('featuresAndShort').split('\n'),
+  }),
+};
+</script>

@@ -1,32 +1,43 @@
 export default {
   computed: {
     isJustImage(): boolean {
-      const {content, subtitle, title} = (this as any);
-      return content.length === 0 && !subtitle && !title;
+      const {content, extras, sections, subtitle, title } = (this as any);
+      return content.length === 0 && !subtitle && !title && sections.length === 0 && extras.length === 0;
     },
   },
+  data: () => ({
+    linksTitle: __("links"),
+  }),
   props: {
     content: {
       default: () => [],
       type: Array,
     },
-    extraLeft: {
+    extras: {
       default: () => [],
       type: Array,
     },
-    extraLeftTitle: {
+    extrasTitle: {
       default: "",
       type: String,
     },
-    extraRight: {
+    images: {
       default: () => [],
       type: Array,
     },
-    extraRightTitle: {
-      default: "",
-      type: String,
+    isSectionOrdered: {
+      default: true,
+      type: Boolean,
     },
-    image: {
+    links: {
+      default: () => [],
+      type: Array,
+    },
+    sections: {
+      default: () => [],
+      type: Array,
+    },
+    sectionsTitle: {
       default: "",
       type: String,
     },

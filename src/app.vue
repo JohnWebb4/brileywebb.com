@@ -8,7 +8,7 @@
         </div>
       </div>
     </header>
-    <nav class="navbar stick-top is-link" role="navigation" aria-label="main navigation">
+    <nav class="navbar stick-top is-info" role="navigation" aria-label="main navigation">
       <div
         role="button"
         class="navbar-burger"
