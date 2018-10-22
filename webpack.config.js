@@ -76,10 +76,12 @@ module.exports = Object.keys(languages).map(language => ({
   ],
   resolve: {
     alias: {
-      // '@components': path.resolve(__dirname, 'src/components/'),
-      // '@screens': path.resolve(__dirname, 'src/screens/'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@locales': path.resolve(__dirname, 'src/locales/'),
+      '@screens': path.resolve(__dirname, 'src/screens/'),
       '@src': path.resolve(__dirname, 'src/'),
-      // '@typings': path.resolve(__dirname, 'typings/'),
+      '@typings': path.resolve(__dirname, 'typings/'),
     },
     extensions: ['.js', '.ts', '.vue'],
   },

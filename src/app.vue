@@ -27,10 +27,10 @@
             v-bind:key="route.path"
             v-for="route in routes">
             <span class="icon is-medium">
-              <i class="fas fa-lg" v-bind:class="route.icon"></i>
+              <i class="fas fa-lg" v-bind:class="route.meta.icon"></i>
             </span>
             <span>
-              {{ route.text }}
+              {{ route.meta.text }}
             </span>
           </router-link>
         </div>
@@ -51,7 +51,6 @@
 
 <script lang="ts">
 import appScript from './app.script';
-// import appScript from '@src/app.script';
 
 export default appScript;
 </script>

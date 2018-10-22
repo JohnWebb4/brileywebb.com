@@ -1,11 +1,12 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import VueRouter, { RouteConfig } from "vue-router";
 
-import { ContentTypes } from "../typings/contenttypes";
-import { IContent } from "../typings/icontent";
-import Contact from "./screens/contact.vue";
-import Content from "./screens/content.vue";
-import Home from "./screens/home.vue";
+import Links from "@assets/links.json";
+import Contact from "@screens/contact.vue";
+import Content from "@screens/content.vue";
+import Home from "@screens/home.vue";
+import { ContentTypes } from "@typings/contenttypes";
+import { IContent } from "@typings/icontent";
 
 Vue.use(VueRouter);
 
@@ -16,7 +17,7 @@ const contents: IContent[] = [
     images: ["images/tess2_0.jpg"],
     links: [
       {
-        ref: "http://www.amazon.com/dp/1494204932",
+        ref: Links.tess2_0.amazon,
         text: __("availableAmazon"),
       },
     ],
@@ -27,15 +28,15 @@ const contents: IContent[] = [
   },
   {
     extras: __("content.women_history.extras").split("\n"),
-    images: [__("images/women_history.jpg")],
+    images: ["images/women_history.jpg"],
     links: [
       {
+        ref: Links.women_history.amazon,
         text: __("availableAmazon"),
-        ref: "https://www.amazon.com/Women-American-History-volumes-Encyclopedia/dp/1610696026/ref=sr_1_1?s=books&ie=UTF8&qid=1540158800&sr=1-1&keywords=women+in+american+history",
       },
       {
+        ref: Links.women_history.rusa,
         text: __("rusaWinner"),
-        ref: "https://www.rusaupdate.org/2018/02/reference-experts-announce-annual-outstanding-reference-sources-list-for-adults/",
       },
     ],
     sections: __("content.women_history.sections").split("\n"),
@@ -119,48 +120,63 @@ const contents: IContent[] = [
 ];
 
 // Route order as in menu
-const routes = [
+const routes: RouteConfig[] = [
   {
-    component: Home,
-    icon: "fa-home",
+    component: async () => Home,
+    meta: {
+      icon: "fa-home",
+      text: __("menu.home"),
+    },
+    name: "home",
     path: "/",
-    text: __("menu.home"),
   },
   {
-    component: Content,
-    icon: "fa-book",
+    component: async () => Content,
+    meta: {
+      icon: "fa-book",
+      text: __("menu.books"),
+    },
+    name: "contentBooks",
     path: "/books",
     props: {
       contents,
       type: ContentTypes.Book,
     },
-    text: __("menu.books"),
   },
   {
-    component: Content,
-    icon: "fa-film",
+    component: async () => Content,
+    meta: {
+      icon: "fa-film",
+      text: __("menu.screenplays"),
+    },
+    name: "contentScreenplays",
     path: "/screenplays",
     props: {
       contents,
       type: ContentTypes.Screenplay,
     },
-    text: __("menu.screenplays"),
   },
   {
-    component: Content,
-    icon: "fa-camera",
+    component: async () => Content,
+    meta: {
+      icon: "fa-camera",
+      text: __("menu.photographs"),
+    },
+    name: "contentPhotographs",
     path: "/photographs",
     props: {
       contents,
       type: ContentTypes.Photograph,
     },
-    text: __("menu.photographs"),
   },
   {
-    component: Contact,
-    icon: "fa-envelope",
+    component: async () => Contact,
+    meta: {
+      icon: "fa-envelope",
+      text: __("menu.contact"),
+    },
+    name: "contact",
     path: "/contact",
-    text: __("menu.contact"),
   },
 ];
 

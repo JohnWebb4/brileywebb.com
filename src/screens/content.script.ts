@@ -1,6 +1,6 @@
-import { ContentTypes } from "../../typings/contenttypes";
-import { IContent } from "../../typings/icontent";
-import Card from "../components/card.vue";
+import Card from "@components/card.vue";
+import { ContentTypes } from "@typings/contenttypes";
+import { IContent } from "@typings/icontent";
 
 export default {
   components: {

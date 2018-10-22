@@ -1,10 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "strict": true,
+    "baseUrl": "./",
     "module": "es2015",
     "moduleResolution": "node",
-    "sourceMap": true
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@locales/*": ["src/locales/*"],
+      "@screens/*": ["src/screens/*"],
+      "@src/*": ["src/*"],
+      "@typings/*": ["typings/*"],
+    },
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
   },
   "include": [
     "typings/*.*",
