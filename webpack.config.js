@@ -1,4 +1,3 @@
-const I18nPlugin = require('i18n-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
@@ -56,7 +55,11 @@ module.exports = Object.keys(languages).map(language => ({
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          mimetype: 'application/font-woff',
+        }
       },
     ],
   },
@@ -66,9 +69,6 @@ module.exports = Object.keys(languages).map(language => ({
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new I18nPlugin(languages[language], {
-      nested: true,
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
