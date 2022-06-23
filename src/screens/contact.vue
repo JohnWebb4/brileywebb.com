@@ -26,7 +26,9 @@
             </div>
           </div>
           <footer class="card-footer">
-            <a class="card-footer-item" href="mailto:Briley@brileywebb.com">{{email}}</a>
+            <a class="card-footer-item" href="mailto:Briley@brileywebb.com">{{
+              email
+            }}</a>
           </footer>
         </div>
       </div>
@@ -38,8 +40,8 @@
 <script>
 export default {
   data: () => ({
-    email: __('email'),
-    textTalkAt: __('talkAt'),
+    email: "email",
+    textTalkAt: "talkAt",
   }),
 };
 </script>

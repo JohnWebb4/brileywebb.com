@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VueI18n from 'vue-i18n'
 import VueRouter, { RouteConfig } from "vue-router";
 
 import Links from "@assets/links.json";
@@ -12,77 +13,77 @@ Vue.use(VueRouter);
 
 const contents: IContent[] = [
   {
-    content: __("content.tess_2_0.content").split("\n"),
-    extras: __("content.tess_2_0.links").split("\n"),
+    content: ("content.tess_2_0.content").split("\n"),
+    extras: ("content.tess_2_0.links").split("\n"),
     images: ["images/tess2_0.jpg"],
     links: [
       {
         ref: Links.tess2_0.amazon,
-        text: __("availableAmazon"),
+        text: ("availableAmazon"),
       },
     ],
-    sections: __("content.tess_2_0.chapters").split("\n"),
-    sectionsTitle: __("chapterTitles"),
-    title: __("content.tess_2_0.title"),
+    sections: ("content.tess_2_0.chapters").split("\n"),
+    sectionsTitle: ("chapterTitles"),
+    title: ("content.tess_2_0.title"),
     type: ContentTypes.Book,
   },
   {
-    extras: __("content.women_history.extras").split("\n"),
+    extras: ("content.women_history.extras").split("\n"),
     images: ["images/women_history.jpg"],
     links: [
       {
         ref: Links.women_history.amazon,
-        text: __("availableAmazon"),
+        text: ("availableAmazon"),
       },
       {
         ref: Links.women_history.rusa,
-        text: __("rusaWinner"),
+        text: ("rusaWinner"),
       },
     ],
-    sections: __("content.women_history.sections").split("\n"),
-    sectionsTitle: __("volumes"),
-    title: __("content.women_history.title"),
+    sections: ("content.women_history.sections").split("\n"),
+    sectionsTitle: ("volumes"),
+    title: ("content.women_history.title"),
     type: ContentTypes.Book,
   },
   {
-    content: __("content.truer_detective.content").split("\n"),
+    content: ("content.truer_detective.content").split("\n"),
     images: ["images/truer_detective_1.jpg"],
-    subtitle: __("content.truer_detective.subtitle"),
-    title: __("content.truer_detective.title"),
+    subtitle: ("content.truer_detective.subtitle"),
+    title: ("content.truer_detective.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: __("content.lone_wolf_carnival.content").split("\n"),
+    content: ("content.lone_wolf_carnival.content").split("\n"),
     images: ["images/lone_wolf_carnival.jpg"],
-    title: __("content.lone_wolf_carnival.title"),
+    title: ("content.lone_wolf_carnival.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: __("content.gun_club_rules.content").split("\n"),
-    title: __("content.gun_club_rules.title"),
+    content: ("content.gun_club_rules.content").split("\n"),
+    title: ("content.gun_club_rules.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: __("content.russian_snowflake.content").split("\n"),
-    extras: __("content.russian_snowflake.extras").split("\n"),
+    content: ("content.russian_snowflake.content").split("\n"),
+    extras: ("content.russian_snowflake.extras").split("\n"),
     images: ["images/russian_snowflake.jpg"],
-    title: __("content.russian_snowflake.title"),
+    title: ("content.russian_snowflake.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: __("content.casa_desert.content").split("\n"),
-    extras: __("content.casa_desert.extras").split("\n"),
+    content: ("content.casa_desert.content").split("\n"),
+    extras: ("content.casa_desert.extras").split("\n"),
     images: ["images/casa_desert.jpg"],
     isSectionOrdered: false,
-    sections: __("content.casa_desert.sections").split("\n"),
-    sectionsTitle: __("characters"),
-    title: __("content.casa_desert.title"),
+    sections: ("content.casa_desert.sections").split("\n"),
+    sectionsTitle: ("characters"),
+    title: ("content.casa_desert.title"),
     type: ContentTypes.Screenplay,
    },
   {
-    content: __("content.tess_2_0_stage.content").split("\n"),
+    content: ("content.tess_2_0_stage.content").split("\n"),
     images: ["images/tess2_0_remi.jpg"],
-    title: __("content.tess_2_0.title"),
+    title: ("content.tess_2_0.title"),
     type: ContentTypes.Screenplay,
   },
   {
@@ -125,7 +126,7 @@ const routes: RouteConfig[] = [
     component: async () => Home,
     meta: {
       icon: "fa-home",
-      text: __("menu.home"),
+      text: ("menu.home"),
     },
     name: "home",
     path: "/",
@@ -134,7 +135,7 @@ const routes: RouteConfig[] = [
     component: async () => Content,
     meta: {
       icon: "fa-book",
-      text: __("menu.books"),
+      text: ("menu.books"),
     },
     name: "contentBooks",
     path: "/books",
@@ -147,7 +148,7 @@ const routes: RouteConfig[] = [
     component: async () => Content,
     meta: {
       icon: "fa-film",
-      text: __("menu.screenplays"),
+      text: ("menu.screenplays"),
     },
     name: "contentScreenplays",
     path: "/screenplays",
@@ -160,7 +161,7 @@ const routes: RouteConfig[] = [
     component: async () => Content,
     meta: {
       icon: "fa-camera",
-      text: __("menu.photographs"),
+      text: ("menu.photographs"),
     },
     name: "contentPhotographs",
     path: "/photographs",
@@ -173,7 +174,7 @@ const routes: RouteConfig[] = [
     component: async () => Contact,
     meta: {
       icon: "fa-envelope",
-      text: __("menu.contact"),
+      text: ("menu.contact"),
     },
     name: "contact",
     path: "/contact",
@@ -186,8 +187,8 @@ const router = new VueRouter({
 
 export default {
   data: () => ({
-    headerText: __("header.text"),
-    headerTitle: __("header.title"),
+    headerText: ("header.text"),
+    headerTitle: ("header.title"),
     mobileShowMenu: false,
     routes,
   }),

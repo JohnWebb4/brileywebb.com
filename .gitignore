@@ -3,4 +3,5 @@ node_modules/
 
 # Webpack
 dist/
+!dist/images/desert.jpg
 !dist/index.html

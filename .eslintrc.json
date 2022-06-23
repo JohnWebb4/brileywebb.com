@@ -7,6 +7,6 @@
         "import/no-unresolved": 0
     },
     "globals": {
-        "__": true
+        "$t": true
     }
 }

@@ -6,7 +6,7 @@ export default {
     },
   },
   data: () => ({
-    linksTitle: __("links"),
+    linksTitle: "links",
   }),
   props: {
     content: {

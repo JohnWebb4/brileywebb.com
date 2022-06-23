@@ -2,9 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
-const languages = require('./src/locales/index');
-
-module.exports = Object.keys(languages).map(language => ({
+module.exports = {
   entry: './src/app.ts',
   module: {
     rules: [
@@ -63,9 +61,8 @@ module.exports = Object.keys(languages).map(language => ({
       },
     ],
   },
-  name: language,
   output: {
-    filename: `${language}.bundle.js`,
+    filename: `main.bundle.js`,
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
@@ -85,4 +82,4 @@ module.exports = Object.keys(languages).map(language => ({
     },
     extensions: ['.js', '.ts', '.vue'],
   },
-}));
+};

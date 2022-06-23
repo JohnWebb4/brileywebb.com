@@ -1,1 +1,1 @@
-declare const __: (name: string) => string;
+declare const $t: (name: string) => string;

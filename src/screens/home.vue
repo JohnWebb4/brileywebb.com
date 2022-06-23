@@ -9,9 +9,9 @@
         <img src="images/bird.jpg" />
       </div>
       <div class="column is-centered">
-        <h3>{{screenplays}}</h3>
+        <h3>{{ screenplays }}</h3>
         <h4 v-bind:key="text" v-for="text in featuresAndShort">
-          {{text}}
+          {{ text }}
         </h4>
       </div>
       <div class="column is-flex is-centered">
@@ -24,8 +24,8 @@
 <script>
 export default {
   data: () => ({
-    screenplays: __('screenplays'),
-    featuresAndShort: __('featuresAndShort').split('\n'),
+    screenplays: "screenplays",
+    featuresAndShort: "featuresAndShort",
   }),
 };
 </script>
