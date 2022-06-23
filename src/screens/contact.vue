@@ -22,12 +22,13 @@
               </div>
             </div>
             <div class="content">
-              {{ textTalkAt }}<a href="mailto:Briley@brileywebb.com">Briley</a>
+              {{ $t("talkAt")
+              }}<a href="mailto:Briley@brileywebb.com">Briley</a>
             </div>
           </div>
           <footer class="card-footer">
             <a class="card-footer-item" href="mailto:Briley@brileywebb.com">{{
-              email
+              $t("email")
             }}</a>
           </footer>
         </div>
@@ -39,9 +40,6 @@
 
 <script>
 export default {
-  data: () => ({
-    email: "email",
-    textTalkAt: "talkAt",
-  }),
+  data: () => ({}),
 };
 </script>

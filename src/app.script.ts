@@ -13,8 +13,8 @@ Vue.use(VueRouter);
 
 const contents: IContent[] = [
   {
-    content: ("content.tess_2_0.content").split("\n"),
-    extras: ("content.tess_2_0.links").split("\n"),
+    content: ("content.tess_2_0.content"),
+    extras: ("content.tess_2_0.links"),
     images: ["images/tess2_0.jpg"],
     links: [
       {
@@ -22,13 +22,13 @@ const contents: IContent[] = [
         text: ("availableAmazon"),
       },
     ],
-    sections: ("content.tess_2_0.chapters").split("\n"),
+    sections: ("content.tess_2_0.chapters"),
     sectionsTitle: ("chapterTitles"),
     title: ("content.tess_2_0.title"),
     type: ContentTypes.Book,
   },
   {
-    extras: ("content.women_history.extras").split("\n"),
+    extras: ("content.women_history.extras"),
     images: ["images/women_history.jpg"],
     links: [
       {
@@ -40,48 +40,48 @@ const contents: IContent[] = [
         text: ("rusaWinner"),
       },
     ],
-    sections: ("content.women_history.sections").split("\n"),
+    sections: ("content.women_history.sections"),
     sectionsTitle: ("volumes"),
     title: ("content.women_history.title"),
     type: ContentTypes.Book,
   },
   {
-    content: ("content.truer_detective.content").split("\n"),
+    content: ("content.truer_detective.content"),
     images: ["images/truer_detective_1.jpg"],
     subtitle: ("content.truer_detective.subtitle"),
     title: ("content.truer_detective.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: ("content.lone_wolf_carnival.content").split("\n"),
+    content: ("content.lone_wolf_carnival.content"),
     images: ["images/lone_wolf_carnival.jpg"],
     title: ("content.lone_wolf_carnival.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: ("content.gun_club_rules.content").split("\n"),
+    content: ("content.gun_club_rules.content"),
     title: ("content.gun_club_rules.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: ("content.russian_snowflake.content").split("\n"),
-    extras: ("content.russian_snowflake.extras").split("\n"),
+    content: ("content.russian_snowflake.content"),
+    extras: "content.russian_snowflake.extras",
     images: ["images/russian_snowflake.jpg"],
     title: ("content.russian_snowflake.title"),
     type: ContentTypes.Screenplay,
   },
   {
-    content: ("content.casa_desert.content").split("\n"),
-    extras: ("content.casa_desert.extras").split("\n"),
+    content: ("content.casa_desert.content"),
+    extras: ("content.casa_desert.extras"),
     images: ["images/casa_desert.jpg"],
     isSectionOrdered: false,
-    sections: ("content.casa_desert.sections").split("\n"),
+    sections: ("content.casa_desert.sections"),
     sectionsTitle: ("characters"),
     title: ("content.casa_desert.title"),
     type: ContentTypes.Screenplay,
    },
   {
-    content: ("content.tess_2_0_stage.content").split("\n"),
+    content: ("content.tess_2_0_stage.content"),
     images: ["images/tess2_0_remi.jpg"],
     title: ("content.tess_2_0.title"),
     type: ContentTypes.Screenplay,
@@ -187,8 +187,6 @@ const router = new VueRouter({
 
 export default {
   data: () => ({
-    headerText: ("header.text"),
-    headerTitle: ("header.title"),
     mobileShowMenu: false,
     routes,
   }),

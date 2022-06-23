@@ -2,13 +2,13 @@ import { ContentTypes } from "./contenttypes";
 import { ILink } from "./ilink";
 
 interface IContent {
-  content?: string[];
-  extras?: string[];
+  content?: string;
+  extras?: string;
   extrasTitle?: string;
   isSectionOrdered?: boolean;
   images?: string[];
   links?: ILink[];
-  sections?: string[];
+  sections?: string;
   sectionsTitle?: string;
   subtitle?: string;
   title?: string;

@@ -3,8 +3,8 @@
     <header class="hero is-primary is-bold">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title" v-text="headerTitle"></h1>
-          <h2 class="subtitle" v-text="headerText"></h2>
+          <h1 class="title" v-text="$t('header.title')"></h1>
+          <h2 class="subtitle" v-text="$t('header.text')"></h2>
         </div>
       </div>
     </header>
@@ -30,7 +30,7 @@
               <i class="fas fa-lg" v-bind:class="route.meta.icon"></i>
             </span>
             <span>
-              {{ route.meta.text }}
+              {{ $t(route.meta.text) }}
             </span>
           </router-link>
         </div>

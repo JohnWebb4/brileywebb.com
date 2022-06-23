@@ -10,12 +10,12 @@ export default {
   }),
   props: {
     content: {
-      default: () => [],
-      type: Array,
+      default: "",
+      type: String,
     },
     extras: {
-      default: () => [],
-      type: Array,
+      default: "",
+      type: String,
     },
     extrasTitle: {
       default: "",
@@ -34,8 +34,8 @@ export default {
       type: Array,
     },
     sections: {
-      default: () => [],
-      type: Array,
+      default: "",
+      type: String,
     },
     sectionsTitle: {
       default: "",

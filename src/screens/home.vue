@@ -9,8 +9,11 @@
         <img src="images/bird.jpg" />
       </div>
       <div class="column is-centered">
-        <h3>{{ screenplays }}</h3>
-        <h4 v-bind:key="text" v-for="text in featuresAndShort">
+        <h3>{{ $t("screenplays") }}</h3>
+        <h4
+          v-bind:key="text"
+          v-for="text in $t('featuresAndShort').split('\n')"
+        >
           {{ text }}
         </h4>
       </div>
@@ -23,9 +26,6 @@
 
 <script>
 export default {
-  data: () => ({
-    screenplays: "screenplays",
-    featuresAndShort: "featuresAndShort",
-  }),
+  data: () => ({}),
 };
 </script>
