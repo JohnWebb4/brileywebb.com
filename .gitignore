@@ -2,6 +2,7 @@
 node_modules/
 
 # Webpack
-# dist/* TODO: Put back
+dist/*
 !dist/images
 !dist/index.html
+!dist/CNAME
